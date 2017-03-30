@@ -141,7 +141,6 @@ class Ui_MainWindow(object):
         self.m_timer.start(1000)
 
     def onGameOver(self, flag):
-        print("flag: ", flag)
         self.m_timer.stop()
         titlestr=""
         if flag ==-1:

@@ -36,6 +36,7 @@ class Ui_Form(object):
         self.colnum=cnum
         self.minenum=mine
         self.pbtnlist=[];
+        self.showbtnnum=0
         for i in range(0, rnum):
             for j in range(0,cnum):
                 btn = QmyPushButton()
@@ -130,9 +131,6 @@ class Ui_Form(object):
         elif btn.data == 0 :
             row=int(index/self.colnum)
             col=index%self.colnum
-            print(index, self.rownum, self.colnum)
-            print("row: ",row,end=" ")
-            print(col)
             for i0 in [row - 1, row, row + 1]:
                 for j0 in [col - 1, col, col + 1]:
                     if i0 >= 0 and i0 < self.rownum and j0 >= 0 and j0 < self.colnum:
